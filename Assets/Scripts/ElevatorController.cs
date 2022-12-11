@@ -17,33 +17,35 @@ public class ElevatorController : MonoBehaviour
 
     public Transform elevator;
     public Transform[] elevatorsFloorPositions;
+    public KeyCode UserKey;
+    public List<KeyCode> KeyCodeForFloors;
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B) && elevatorCurrentMotion == ElevatorCurrentMotion.NotMoving)
+        if (Input.GetKeyDown(UserKey/*B*/) && elevatorCurrentMotion == ElevatorCurrentMotion.NotMoving)
         {
             MoveElevator();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(/*KeyCode.Alpha1*/KeyCodeForFloors[1]))
             RequestElevator(1);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(/*KeyCode.Alpha2*/KeyCodeForFloors[2]))
             RequestElevator(2);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(/*KeyCode.Alpha3*/KeyCodeForFloors[3]))
             RequestElevator(3);
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(/*KeyCode.Alpha4*/KeyCodeForFloors[4]))
             RequestElevator(4);
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(/*KeyCode.Alpha5*/KeyCodeForFloors[5]))
             RequestElevator(5);
-        if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetKeyDown(/*KeyCode.Alpha6*/KeyCodeForFloors[6]))
             RequestElevator(6);
-        if (Input.GetKeyDown(KeyCode.Alpha7))
+        if (Input.GetKeyDown(/*KeyCode.Alpha7*/KeyCodeForFloors[7]))
             RequestElevator(7);
-        if (Input.GetKeyDown(KeyCode.Alpha8))
+        if (Input.GetKeyDown(/*KeyCode.Alpha8*/KeyCodeForFloors[8]))
             RequestElevator(8);
-        if (Input.GetKeyDown(KeyCode.Alpha9))
+        if (Input.GetKeyDown(/*KeyCode.Alpha9*/KeyCodeForFloors[9]))
             RequestElevator(9);
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (Input.GetKeyDown(/*KeyCode.Alpha0*/KeyCodeForFloors[0]))
             RequestElevator(0);
     }
 
