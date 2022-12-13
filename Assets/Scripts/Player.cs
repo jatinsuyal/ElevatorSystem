@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Transform freeCam;
     public CharacterController cc;
     public bool groundedPlayer;
     Vector3 playerVelocity;
-    public float gravityValue = -10f, playerSpeed = 5f;
+    public float gravityValue = -10f;
+    public float playerSpeed = 5f;
     public float xVal, yVal;
 
     float forwardSpeedMultiplier = 1f;
@@ -23,8 +23,6 @@ public class Player : MonoBehaviour
 
         playerRotationFn();
 
-       // Vector3 targetRot = new Vector3(0f, freeCam.transform.eulerAngles.y, 0f);
-       // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(targetRot), Time.deltaTime * 30);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpPressed();
